@@ -1,0 +1,492 @@
+/* Reset padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Corpo da página com animação corrigida */
+body {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
+    background: linear-gradient(160deg, #d80970, #46013aea, #d80970, #46013aea);
+    animation: fadeIn 0.8s ease-in-out forwards, gradient 15s ease infinite;
+    overflow: auto;
+    
+    background: linear-gradient(160deg, #d80970, #46013aea, #d80970, #46013aea);
+    background-size: 300% 300%;
+}
+
+/* Animação do gradiente corrigida */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.backgraund {
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    opacity: 0.9;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Ajustes para diferentes telas */
+@media (max-width: 1200px) {
+    .backgraund {
+        background-size: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .backgraund {
+        background-size: 60%;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-top: 45px; 
+}
+
+.cabeçalho-links {
+    display: flex;
+    gap: 3rem;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.cabeçalho-links a {
+    margin-top: -13px;
+    padding: 10px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.cabeçalho-links a:hover {
+    color: #18df43;
+    transition: 0.3s all;
+}
+
+.logo {
+    height: 85px;
+    width: 85px;
+    background: transparent;
+    border: 1px solid #2ECC71;
+
+    color: #18df43;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+/* Styles for the message */
+#message {
+    display: none; /* Initially hidden */
+    position: absolute;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 5px;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.clock-container {
+    color: #ffff;
+    background: transparent;
+    border: solid 2px #2ECC71;
+    padding: 20px;
+    border-radius: 2px;
+    font-size: 20px;
+    width: 150px;
+}
+
+#bandeiras {
+    color: #18df43; /* Same green color */
+    font-size: 30px; /* Existing font size */
+    position: absolute; /* Positioning context */
+    left: 1100px; /* Align to the left */
+    top: 8%;
+    margin-right: 10px; /* Spacing between .bandeiras and clock */
+}
+
+.contact-button {
+    color: #18df43;
+    background: transparent;
+    border: solid 2px #2ECC71;
+    padding: 5px 10px; /* Adjusted padding for better centering */
+    border-radius: 1px;
+    font-size: 12px;
+    width: 150px;
+    cursor: pointer;
+    display: flex; /* Added to align items */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+}
+
+.contact-button:hover {
+    background-color: #fff;
+    color: #fff;
+    transition: 0.7s;
+}
+
+.container-text {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 100px;
+    margin: 50px auto;
+    margin-left: 50px;
+    margin-top: 50px;
+    font-weight: 100px;
+    left: 100px;
+}
+
+/* Animation for text elements */
+.texto h3 {
+    opacity: 0;
+    animation: fadeInText 1s forwards;
+    animation-delay: 0.5s;
+    color: #18df43;
+    font-size: 36px;
+    margin-left: 5px;
+}
+
+.texto h1 {
+    opacity: 0;
+    animation: fadeInText 1s forwards;
+    animation-delay: 1.5s;
+    margin-left: 10px;
+    font-size: 19;
+    color: #ffff;
+}
+
+.texto p {
+    opacity: 0;
+    animation: fadeInText 1s forwards;
+    animation-delay: 2.5s;
+    font-size: 21px;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    color: #ffff;
+    padding: 10px;
+}
+
+.texto span, .texto2 span {
+    color: #18df43;
+}
+
+.redes-sociais {
+    opacity: 0;
+    animation: fadeInText 1s forwards;
+    animation-delay: 3.5s;
+    padding: 50px;
+    margin-top: 5px;
+}
+
+.redes-sociais a {
+    font-size: 55px;
+    color: #18df43;
+    margin-top: 5px;
+    padding: 35px;
+    margin-left: 65px;
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.imagem-fio {
+    animation: balanco 3s ease-in-out; /* Increased duration from 3s to 5s */
+    animation-delay: 4.5s;
+    width: 100%;
+    height: 70vh;
+    margin-top: -250px;
+    margin-right: -495px;
+}
+
+@keyframes balanco {
+    0% {
+        transform: translate(-400px, -400px);
+    }
+    100% {
+        transform: translate(1px, 1px);
+    }
+}
+
+.imagem-luz {
+    opacity: 0; /* Começa invisível */
+    height: 118px;
+    position: absolute;
+    top: 297px;
+    right: 34px;
+    transform: scale(2);
+    cursor: pointer;
+    transition: opacity 0.5s ease-in-out; /* Suaviza a transição */
+    animation: luzacende 0.5s ease-in-out forwards;
+    animation-delay: 8.5s;
+    transform: translate(-14px, 14px);
+    z-index: 99;
+}
+
+/* Animação que acende automaticamente após 8.5s */
+@keyframes luzacende {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Classe que permite alternar depois da animação */
+.acender {
+    opacity: 1 !important;
+}
+
+.apagar {
+    opacity: 0 !important;
+}
+
+.imagem-pessoa {
+    opacity: 0; /* Ensure initial opacity is set to 0 */
+    animation: imagem-animation 5s forwards;
+    animation-delay: 4.5s; /* Updated delay to 5.5s */
+    position: absolute;
+    top: 170px;
+    right: 20px;
+    margin: 0;
+}
+
+@keyframes imagem-animation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container-texto2{
+    transform: translateY(60px)
+}
+
+/* Inicialmente fora da tela */
+.texto2 {
+    opacity: 0;
+    transform: translateX(-500px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Quando entra na tela */
+.texto2.show {
+    opacity: 1 !important;
+    transform: translateX(0);
+}
+
+.texto2 h3 {
+    color: #ffff;
+    font-size: 28px;
+    padding: 10px;
+}
+.texto2 h2 {
+    font-size: 32px;
+    color: white;
+    padding: 10px;
+}   
+
+.texto2 h1 {
+    color: #18df43;
+    margin-top: 20px;
+    padding: 10px;
+}
+.texto2 span {
+    color: #18df43;
+}
+
+.p-container {
+    display: flex; /* Adiciona display flex para alinhar os <p> */
+    justify-content: flex-start; /* Alinha os <p> à esquerda */
+    margin-left: 115px; /* Adiciona margem à esquerda para ajuste de posição */
+    gap: 315px; /* Espaço entre os elementos */
+    color: #18df43;
+    margin-top: 65px;
+    margin-bottom: 5px;
+    font-size: 50px;
+}
+
+.gif {
+    /* Removed erroneous animation */
+
+    animation: fade-in 2s ease-out forwards; /* Corrected animation */
+
+    animation-delay: fade-in 9.5s;
+    display: flex;
+    justify-content: flex-start; /* Alinha os GIFs à esquerda */
+    align-items: center; /* Alinha no eixo Y */
+    gap: 200px; /* Espaço entre os GIFs */
+    margin-top: 5px; /* Mantém o espaçamento superior */
+    margin-left: -30px;
+}
+
+.gif img {
+    width: 245px; /* Define um tamanho fixo */
+    height: 245px; /* Mantém a altura proporcional */
+    object-fit: cover; /* Evita distorções cortando o excesso */
+}
+
+/* Estado inicial da animação */
+.fade-in {
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Quando o elemento entra na tela, aplicamos a animação */
+.fade-in.show {
+    animation: fade-in 2s ease-out forwards;
+    opacity: 1 !important; /* Garante que o estado final seja mantido */
+}
+
+/* Animação de entrada */
+@keyframes fade-in {
+    0% {
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+    80% {
+        transform: translateX(75px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(50px);
+    }
+}
+
+.seta {
+    opacity: 0; 
+    animation: pulando 2s ease-out alternate infinite;
+    width: 200px;
+    position: absolute;
+    left: 20%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    animation-delay: 4.5s, 0s; /* Updated delay to 5.5s */
+}
+
+@keyframes pulando {
+    0% {
+        transform: translateY(-15px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(15px);
+        opacity: 1;
+    }
+}
+
+.container-text3 {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.container-text3.animate {
+    opacity: 1;
+    transform: translateY(-300px);
+}
+
+.container-text3 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0px;
+    margin: 10px auto;
+    margin-left: 800px;
+    transform: translateY(-300px);
+}
+
+
+.texto3 h1 {
+    color: #18df43;
+    font-size: 30px;
+}
+
+.texto3 p {
+    color: #fff;
+    font-size: 25px;
+}
+
+.texto3 p2 {
+    color: #fff;
+    font-size: 25px;
+}
+
+.texto3 p3 {
+    color: #fff;
+    font-size: 25px;
+}
+
+.container-text4{
+    animation: fade-text4 3s ease-out;
+    
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0px;
+    margin: 10px auto;
+    transform: translate(-500px, 380px);
+}
+
+.texto4 h1{
+    color: #18df43;
+}
+
+.texto4 span{
+    color: #fff;
+}
+
+.texto4 p{
+    color: #fff;
+    font-size: 30px;
+}
+.texto4 p2{
+    color: #fff;
+    font-size: 30px;
+}
+
+@keyframes fade-text4{
+    from{
+        transform: translate(-1000px, 680px);
+    }
+    to{
+        transform: translate(-500px, 380px);
+    }
+}
